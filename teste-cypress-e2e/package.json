@@ -6,7 +6,9 @@
   "dependencies": {
     "cypress": "^14.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0"
+  },
   "scripts": {
     "test": "mocha"
   },

@@ -1,12 +1,10 @@
 const { defineConfig } = require('cypress');
-const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin;
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: "cypress/e2e/**/*.feature", // Define os arquivos .feature
+    specPattern: "cypress/e2e/**/*.cy.{js,ts}", // Define os arquivos de teste padrão do Cypress
     setupNodeEvents(on, config) {
-      require('@badeball/cypress-cucumber-preprocessor').addCucumberPreprocessorPlugin(on, config);
-      on("file:preprocessor", createEsbuildPlugin(config));
+      // Removemos qualquer configuração relacionada ao Cucumber
       return config;
     },
   },

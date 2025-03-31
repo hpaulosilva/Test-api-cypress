@@ -1,0 +1,33 @@
+name: Cypress Tests
+
+on:
+  #sempre que ouver um push ou pull request na branch main ou develop vai ativar o workflow com o nome Cypress Tests
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+
+  #job que vai rodar os testes do cypress na máquina virtual ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm install
+    
+      - name: Rodar os testes do Cypress
+        run: npx cypress run --spec "cypress/steps/**/*.cy.js"
