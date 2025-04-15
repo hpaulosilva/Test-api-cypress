@@ -22,8 +22,15 @@ basta importar o arquivo na ferramenta.
 
 Pasta 
 -->TestsSuceDemo
-	Possui testes mais detalhados com Python, Selenium e BDD nos casos de testes.
 	
+
+	Possui testes mais detalhados com Python, SeleniumLibrary, BDD nos casos de testes e pageObjects.
+
+	Pré requisitos no redme.md do robot
+
+
+--> Raiz 
+	Plano de teste um arquivo .xml para testes de carga no jmeter
 
 
  

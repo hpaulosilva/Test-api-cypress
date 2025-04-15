@@ -13,6 +13,8 @@ Se preferir a instalação passo a passo, siga as instruções abaixo.
 
 Install Robot:
 $ pip install robot-framework
+$pip install robotframework-seleniumlibrary
+Tero chromedriver instalado.
 
 Espere completar a instalação e verifique se tudo ocorreu bem com o comando
 $ robot --version
